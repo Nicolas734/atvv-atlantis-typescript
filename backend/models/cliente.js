@@ -14,15 +14,13 @@ const Cliente = db.define('clientes',{
         type:Sequelize.STRING
     },
     dataNascimento:{
-        type:Sequelize.DATE
+        type:Sequelize.STRING
     },
     dataCadastro:{
-        type:Sequelize.DATE
+        type:Sequelize.STRING
     },
     titular_id:{
         type:Sequelize.INTEGER,
-        primaryKey:true,
-        allowNull:true
     }
 })
 
