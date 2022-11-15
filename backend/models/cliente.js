@@ -1,4 +1,4 @@
-import db from "../config/db";
+import db from "../config/db.js";
 import { Sequelize } from "sequelize";
 
 const Cliente = db.define('clientes',{
@@ -21,7 +21,8 @@ const Cliente = db.define('clientes',{
     },
     titular_id:{
         type:Sequelize.INTEGER,
-        primaryKey:true
+        primaryKey:true,
+        allowNull:true
     }
 })
 
