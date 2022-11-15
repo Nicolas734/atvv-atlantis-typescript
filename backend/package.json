@@ -1,4 +1,24 @@
 {
+  "name": "atvv-atlantis-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolas734/atvv-atlantis-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolas734/atvv-atlantis-typescript/issues"
+  },
+  "homepage": "https://github.com/Nicolas734/atvv-atlantis-typescript#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -6,5 +26,10 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20",
     "sequelize": "^6.25.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
+
+
