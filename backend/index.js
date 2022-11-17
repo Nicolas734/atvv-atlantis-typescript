@@ -3,6 +3,7 @@ import cors from "cors";
 import db from "./config/db.js";
 import acomodacaoRouter from "./routes/acomodacaoRouter.js"
 import clienteRouter from "./routes/clienteRouter.js"
+import dependenteRouter from "./routes/dependenteRouter.js"
 import documentoRouter from "./routes/documentoRouter.js"
 import enderecoRouter from "./routes/enderecoRouter.js"
 import hospedagemRouter from "./routes/hospedagemRouter.js"
@@ -26,6 +27,8 @@ app.use(express.json());
 app.use("/acomodacao", acomodacaoRouter);
 
 app.use("/cliente", clienteRouter);
+
+app.use("/dependente", dependenteRouter);
 
 app.use("/documento", documentoRouter);
 
