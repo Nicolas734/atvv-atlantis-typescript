@@ -9,17 +9,17 @@ const Telefone = db.define("telefones",{
         primaryKey:true
     },
     ddd:{
-        type:Sequelize.INTEGER
+        type:Sequelize.STRING
     },
     numero:{
-        type:Sequelize.INTEGER
+        type:Sequelize.STRING
     },
-    cliete_id:{
+    id_cliente:{
         type:Sequelize.INTEGER
     }
 })
 
-Telefone.Cliente = Telefone.belongsTo(Telefone,{foreignKey:{name:"cliente_id"}})
-Cliente.Telefone = Cliente.hasMany(Cliente,{foreignKey:"cliente_id"})
+Telefone.Cliente = Telefone.belongsTo(Telefone,{foreignKey:{name:"id_cliente"}})
+Cliente.Telefone = Cliente.hasMany(Cliente,{foreignKey:"id_cliente"})
 
 export default Telefone;

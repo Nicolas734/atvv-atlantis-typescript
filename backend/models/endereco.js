@@ -26,12 +26,12 @@ const Endereco = db.define("enderecos",{
     cep:{
         type:Sequelize.STRING
     },
-    cliente_id:{
+    id_cliente:{
         type:Sequelize.INTEGER
     }
 })
 
-Endereco.Cliente = Endereco.belongsTo(Endereco,{foreignKey:{name:"cliente_id"}})
-Cliente.Endereco = Cliente.hasMany(Endereco,{foreignKey:"cliente_id"})
+Endereco.Cliente = Endereco.belongsTo(Endereco,{foreignKey:{name:"id_cliente"}})
+Cliente.Endereco = Cliente.hasMany(Endereco,{foreignKey:"id_cliente"})
 
 export default Endereco;

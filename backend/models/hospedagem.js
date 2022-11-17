@@ -9,18 +9,18 @@ const Hospedagem = db.define("hospedagens",{
         autoIncrement:true,
         primaryKey:true
     },
-    cliente_id:{
+    id_cliente:{
         type:Sequelize.INTEGER
     },
-    acomodacao_id:{
+    id_acomodacao:{
         type:Sequelize.INTEGER
     }
 })
 
-Hospedagem.belongsTo(Cliente,{foreignKey:"cliente_id"})
-Cliente.Hospedagem = Cliente.hasMany(Hospedagem,{foreignKey:"cliente_id"})
+Hospedagem.belongsTo(Cliente,{foreignKey:"id_cliente"})
+Cliente.Hospedagem = Cliente.hasMany(Hospedagem,{foreignKey:"id_cliente"})
 
-Hospedagem.belongsTo(Acomodacao,{foreignKey:"acomodacao_id"})
-Acomodacao.Hospedagem = Acomodacao.hasMany(Hospedagem,{foreignKey:"acomodacao_id"})
+Hospedagem.belongsTo(Acomodacao,{foreignKey:"id_acomodacao"})
+Acomodacao.Hospedagem = Acomodacao.hasMany(Hospedagem,{foreignKey:"id_acomodacao"})
 
 export default Hospedagem;

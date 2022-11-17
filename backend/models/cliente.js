@@ -19,12 +19,12 @@ const Cliente = db.define('clientes',{
     dataCadastro:{
         type:Sequelize.STRING
     },
-    titular_id:{
+    id_titular:{
         type:Sequelize.INTEGER
     }
 })
 
-Cliente.Cliente = Cliente.belongsTo(Cliente,{foreignKey:{name:"titular_id"}})
-Cliente.Cliente =Cliente.hasMany(Cliente,{foreignKey:"titular_id"})
+Cliente.Cliente = Cliente.belongsTo(Cliente,{foreignKey:{name:"id_titular"}})
+Cliente.Cliente =Cliente.hasMany(Cliente,{foreignKey:"id_titular"})
 
 export default Cliente;

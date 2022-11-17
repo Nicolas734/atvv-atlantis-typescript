@@ -7,10 +7,13 @@ const Acomodacao = db.define("acomodacoes",{
         autoIncrement:true,
         primaryKey:true
     },
-    nomeclatura:{
+    nomenclatura:{
+        type:Sequelize.STRING
+    },
+    camaSolteiro:{
         type:Sequelize.INTEGER
     },
-    camaSolterio:{
+    camaCasal:{
         type:Sequelize.INTEGER
     },
     suite:{

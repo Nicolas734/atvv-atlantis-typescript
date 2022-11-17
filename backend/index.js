@@ -10,7 +10,7 @@ import telefoneRouter from "./routes/telefoneRouter.js"
 
 try{
     db.authenticate().then(()=>{
-        db.sync({force:true})
+        db.sync()
         console.log('Banco de Dados Conectado.');
     });
 }catch(error){

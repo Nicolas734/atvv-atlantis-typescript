@@ -9,7 +9,7 @@ const Documento = db.define("documentos",{
         primaryKey:true
     },
     numero:{
-        type:Sequelize.INTEGER
+        type:Sequelize.STRING
     },
     tipo:{
         type:Sequelize.STRING
@@ -17,12 +17,12 @@ const Documento = db.define("documentos",{
     dataExpedicao:{
         type:Sequelize.STRING
     },
-    cliente_id:{
+    id_cliente:{
         type:Sequelize.INTEGER
     }
 })
 
-Documento.Cliente = Documento.belongsTo(Documento,{foreignKey:{name:"cliente_id"}})
-Cliente.Documento = Cliente.hasMany(Cliente,{foreignKey:"cliente_id"})
+Documento.Cliente = Documento.belongsTo(Documento,{foreignKey:{name:"id_cliente"}})
+Cliente.Documento = Cliente.hasMany(Cliente,{foreignKey:"id_cliente"})
 
 export default Documento;
