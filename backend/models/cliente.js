@@ -20,11 +20,11 @@ const Cliente = db.define('clientes',{
         type:Sequelize.STRING
     },
     titular_id:{
-        type:Sequelize.INTEGER,
+        type:Sequelize.INTEGER
     }
 })
 
 Cliente.Cliente = Cliente.belongsTo(Cliente,{foreignKey:{name:"titular_id"}})
 Cliente.Cliente =Cliente.hasMany(Cliente,{foreignKey:"titular_id"})
 
-export default Cliente
+export default Cliente;
