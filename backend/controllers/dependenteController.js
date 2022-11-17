@@ -43,7 +43,8 @@ export const buscarTitularDependentes = async (req, res) => {
         const dependentes = await Cliente.findAll({
             where:{
                 id_titular:req.params.id,
-            }
+            },
+            attributes:['id','nome','nomeSocial','dataNascimento','dataCadastro','id_titular']
         })
         res.status(302).json(dependentes)
     }catch(error){
