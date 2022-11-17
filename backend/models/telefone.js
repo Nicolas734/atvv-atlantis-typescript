@@ -17,9 +17,9 @@ const Telefone = db.define("telefones",{
     id_cliente:{
         type:Sequelize.INTEGER
     }
-})
+});
 
-Telefone.Cliente = Telefone.belongsTo(Telefone,{foreignKey:{name:"id_cliente"}})
-Cliente.Telefone = Cliente.hasMany(Cliente,{foreignKey:"id_cliente"})
+Telefone.belongsTo(Cliente,{foreignKey:{name:"id_cliente"}});
+Cliente.Telefone = Cliente.hasMany(Cliente,{foreignKey:"id_cliente"});
 
 export default Telefone;

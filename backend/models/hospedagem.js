@@ -15,12 +15,12 @@ const Hospedagem = db.define("hospedagens",{
     id_acomodacao:{
         type:Sequelize.INTEGER
     }
-})
+});
 
-Hospedagem.belongsTo(Cliente,{foreignKey:"id_cliente"})
-Cliente.Hospedagem = Cliente.hasMany(Hospedagem,{foreignKey:"id_cliente"})
+Hospedagem.belongsTo(Cliente,{foreignKey:"id_cliente"});
+Cliente.Hospedagem = Cliente.hasMany(Hospedagem,{foreignKey:"id_cliente"});
 
-Hospedagem.belongsTo(Acomodacao,{foreignKey:"id_acomodacao"})
-Acomodacao.Hospedagem = Acomodacao.hasMany(Hospedagem,{foreignKey:"id_acomodacao"})
+Hospedagem.belongsTo(Acomodacao,{foreignKey:"id_acomodacao"});
+Acomodacao.Hospedagem = Acomodacao.hasMany(Hospedagem,{foreignKey:"id_acomodacao"});
 
 export default Hospedagem;

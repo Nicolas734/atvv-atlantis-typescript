@@ -1,24 +1,24 @@
 import express from "express";
 import cors from "cors";
 import db from "./config/db.js";
-import acomodacaoRouter from "./routes/acomodacaoRouter.js"
-import clienteRouter from "./routes/clienteRouter.js"
-import dependenteRouter from "./routes/dependenteRouter.js"
-import documentoRouter from "./routes/documentoRouter.js"
-import enderecoRouter from "./routes/enderecoRouter.js"
-import hospedagemRouter from "./routes/hospedagemRouter.js"
-import telefoneRouter from "./routes/telefoneRouter.js"
+import acomodacaoRouter from "./routes/acomodacaoRouter.js";
+import clienteRouter from "./routes/clienteRouter.js";
+import dependenteRouter from "./routes/dependenteRouter.js";
+import documentoRouter from "./routes/documentoRouter.js";
+import enderecoRouter from "./routes/enderecoRouter.js";
+import hospedagemRouter from "./routes/hospedagemRouter.js";
+import telefoneRouter from "./routes/telefoneRouter.js";
 
 try{
     db.authenticate().then(()=>{
-        db.sync()
+        db.sync({force:true})
         console.log('Banco de Dados Conectado.');
     });
 }catch(error){
-    console.error('Erro ao tentar conectar:',error)
+    console.error('Erro ao tentar conectar:',error);
 }
 
-const app = express()
+const app = express();
 
 app.use(cors());
 
